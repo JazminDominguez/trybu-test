@@ -7,18 +7,24 @@ pink: #FF6B6B;
 soft yellow: #FFE66D;
 */
 
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap");
+
 body {
   background-color: #4ecdc4 !important;
   color: #1a535c !important;
   margin: 0 20px !important;
   text-align: center;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .pokemon__card {
   background-color: #f7fff7;
-  text-align: center;
-  margin: 15px;
   border-radius: 15px;
+  margin: 15px;
+  padding: 15px;
+  position: relative;
+  padding: 15px 0;
+  text-align: center;
 }
 
 .pokemon__picture {
@@ -26,8 +32,27 @@ body {
 }
 
 .pokemon__picture img {
-  width: 100%;
   height: auto;
   max-height: 260px;
   max-width: 300px;
+  width: 100%;
+}
+
+.pokemon__number {
+  background-color: #ff6b6b;
+  border-radius: 50px;
+  color: #f7fff7;
+  left: 50%;
+  position: absolute;
+  top: -5px;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+
+.pokemon__name {
+  background-color: #ffe66d;
+  color: #1a535c;
+  margin-top: 15px;
+  width: 100%;
+  font-family: "Noto Sans JP";
 }

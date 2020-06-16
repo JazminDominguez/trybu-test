@@ -28,8 +28,8 @@ export function PokemonContainer() {
   if (error) return `Error! ${error.message}`;
 
   return (
-    <Container className="flex-wrap flex-column justify-content-center">
-      <Row>
+    <Container className="flex-wrap flex-column" fluid>
+      <Row className="justify-content-center">
         {pokemons.map((pokemon) => (
           <PokemonCard key={pokemon.id} pokemon={pokemon} />
         ))}
