@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
+import { PokemonContainer } from "./components/PokemonContainer";
 
 const App = () => {
   return (
     <div>
-      <h1>functional component</h1>
+      <PokemonContainer />
     </div>
   );
 };
