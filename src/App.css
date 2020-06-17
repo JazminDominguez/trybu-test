@@ -76,5 +76,14 @@ p {
 .error__message {
   color: #1a535c;
   font-weight: 500;
+  padding: 15px;
   text-align: center;
+}
+
+.show__all {
+  background: #ffe66d;
+  border-radius: 10px;
+  border-width: inherit;
+  color: #1a535c;
+  height: 38px;
 }

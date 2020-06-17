@@ -33,7 +33,9 @@ const App = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <button onClick={() => setPokemonResult("")}>Show All!</button>
+            <button className="show__all" onClick={() => setPokemonResult("")}>
+              Show All!
+            </button>
           </Nav>
           <Form inline>
             <FormControl
