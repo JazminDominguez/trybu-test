@@ -1,14 +1,14 @@
 import React from "react";
 import { useQuery } from "@apollo/react-hooks";
 import PokemonCard from "./PokemonCard";
-import { GET_POKEMONS } from "../querys/get-list-pokemons";
+import { GET_POKEMON_BY_NAME } from "../querys/get-pokemon-by-name";
 import { Container, Row } from "react-bootstrap";
 
-export function PokemonContainer() {
-  const { loading, error, data: { pokemons = [] } = {} } = useQuery(
-    GET_POKEMONS,
+const PokemonSearch = ({ pokemonName }) => {
+  const { loading, error, data: { pokemon = [] } = {} } = useQuery(
+    GET_POKEMON_BY_NAME,
     {
-      variables: { first: 20 },
+      variables: { name: [pokemonName] },
     }
   );
 
@@ -22,10 +22,9 @@ export function PokemonContainer() {
       style={{ marginTop: "20px" }}
     >
       <Row className="justify-content-center">
-        {pokemons.map((pokemon) => (
-          <PokemonCard key={pokemon.id} pokemon={pokemon} />
-        ))}
+        <PokemonCard key={pokemon.id} pokemon={pokemon} />
       </Row>
     </Container>
   );
-}
+};
+export default PokemonSearch;
