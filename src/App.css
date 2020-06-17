@@ -30,6 +30,12 @@ p {
   text-align: center;
 }
 
+.pokemon__card:hover {
+  transform: scale(1.1);
+  background-color: #1a535c;
+  z-index: 10;
+}
+
 .pokemon__picture {
   max-height: 260px;
 }

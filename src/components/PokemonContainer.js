@@ -8,7 +8,7 @@ export function PokemonContainer() {
   const { loading, error, data: { pokemons = [] } = {} } = useQuery(
     GET_POKEMONS,
     {
-      variables: { first: 20 },
+      variables: { first: 80 },
     }
   );
 
