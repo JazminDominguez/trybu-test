@@ -22,7 +22,14 @@ const PokemonSearch = ({ pokemonName }) => {
       style={{ marginTop: "20px" }}
     >
       <Row className="justify-content-center">
-        <PokemonCard key={pokemon.id} pokemon={pokemon} />
+        {pokemon === null || undefined ? (
+          <p className="error__message">
+            Oops! it seems we can't find that Pokemon. Try typing it's name
+            again!
+          </p>
+        ) : (
+          <PokemonCard key={pokemon.id} pokemon={pokemon} />
+        )}
       </Row>
     </Container>
   );

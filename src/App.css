@@ -16,6 +16,10 @@ body {
   font-family: "Noto Sans JP", sans-serif;
 }
 
+p {
+  font-family: "Noto Sans JP";
+}
+
 .pokemon__card {
   background-color: #f7fff7;
   border-radius: 15px;
@@ -67,4 +71,10 @@ body {
   border-radius: 10px !important;
   color: #1a535c !important;
   margin: 5px 0 !important;
+}
+
+.error__message {
+  color: #1a535c;
+  font-weight: 500;
+  text-align: center;
 }
